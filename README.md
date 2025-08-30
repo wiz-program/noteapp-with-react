@@ -12,6 +12,22 @@ Reactで構築されたモダンで機能豊富なノート作成アプリケー
 - **レスポンシブデザイン**: クリーンで直感的なユーザーインターフェース
 - **Markdown対応**: リッチフォーマット用のMarkdown構文でノートを記述
 
+## 🌐 GitHub Pages デプロイ
+
+このアプリケーションはGitHub Pagesで公開されています。
+
+### 自動デプロイ
+- mainブランチにプッシュすると自動的にGitHub Pagesにデプロイされます
+- GitHub Actionsワークフローがビルドとデプロイを自動化します
+
+### 手動デプロイ
+```bash
+npm run deploy
+```
+
+### デプロイ先URL
+- リポジトリ名が `noteapp-with-react` の場合: `https://[username].github.io/noteapp-with-react/`
+
 ## 🛠️ 使用技術
 
 - **React 19.1.1** - フックを使用したモダンなReact
