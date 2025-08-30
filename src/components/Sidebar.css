@@ -1,0 +1,173 @@
+/* Button base styles */
+button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  margin: 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.app-sidebar {
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid var(--border-color);
+  background-color: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--background-color);
+}
+
+.app-sidebar-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+.app-sidebar-header button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 600;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.app-sidebar-header button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.app-sidebar-notes {
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: var(--spacing-sm);
+}
+
+.app-sidebar-notes::-webkit-scrollbar {
+  width: 6px;
+}
+
+.app-sidebar-notes::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.app-sidebar-notes::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.app-sidebar-notes::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.app-sidebar-note {
+  padding: var(--spacing-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-sm);
+  border: 1px solid transparent;
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.app-sidebar-note:hover {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.app-sidebar-note.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.app-sidebar-note.active .app-sidebar-note-title strong {
+  color: white;
+}
+
+.app-sidebar-note.active small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.app-sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.app-sidebar-note-title strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  flex: 1;
+  margin-right: var(--spacing-sm);
+}
+
+.app-sidebar-note-title button {
+  padding: var(--spacing-xs);
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: var(--text-muted);
+}
+
+.app-sidebar-note:hover .app-sidebar-note-title button {
+  opacity: 1;
+}
+
+.app-sidebar-note.active .app-sidebar-note-title button {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.app-sidebar-note p {
+  margin: var(--spacing-sm) 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.app-sidebar-note small {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 500;
+}
